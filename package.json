@@ -4,11 +4,16 @@
   "description": "An awesome Kibana plugin",
   "main": "gulpfile.js",
   "scripts": {
-    "start": "../kibana/bin/kibana --dev --plugin-path=.",
     "lint": "eslint",
-    "test:server": "mocha --require ../kibana/test/mocha_setup.js server/**/__tests__/**/*.js",
-    "test:browser": "node ./scripts/test_browser.js",
-    "build": "node ./scripts/build.js"
+    "start": "node ./tasks/start",
+    "test:server": "node ./tasks/test_server.js",
+    "test:browser": "node ./tasks/test_browser.js",
+    "build": "node ./tasks/build.js"
+  },
+  "config": {
+    "kibanaPluginHelper": {
+      "home": "../kibana"
+    }
   },
   "devDependencies": {
     "@elastic/eslint-config-kibana": "0.0.2",
