@@ -6,7 +6,8 @@
   "scripts": {
     "start": "../kibana/bin/kibana --dev --plugin-path=.",
     "lint": "eslint",
-    "test": "mocha --opts ../kibana/test/mocha.opts",
+    "test:server": "mocha --require ../kibana/test/mocha_setup.js server/**/__tests__/**/*.js",
+    "test:browser": "node ./scripts/test_browser.js",
     "build": "node ./scripts/build.js"
   },
   "devDependencies": {
@@ -14,7 +15,10 @@
     "babel-eslint": "4.1.8",
     "eslint": "1.10.3",
     "eslint-plugin-mocha": "1.1.0",
+    "expect.js": "^0.3.1",
     "gulp-zip": "3.1.0",
+    "mocha": "^2.4.5",
+    "sinon": "^1.17.3",
     "vinyl-fs": "2.3.1"
   }
 }
