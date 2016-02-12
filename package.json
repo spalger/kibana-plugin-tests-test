@@ -1,0 +1,20 @@
+{
+  "name": "test",
+  "version": "0.1.0",
+  "description": "An awesome Kibana plugin",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "../kibana/bin/kibana --dev --plugin-path=.",
+    "lint": "eslint",
+    "test": "mocha --opts ../kibana/test/mocha.opts",
+    "build": "node ./scripts/build.js"
+  },
+  "devDependencies": {
+    "@elastic/eslint-config-kibana": "0.0.2",
+    "babel-eslint": "4.1.8",
+    "eslint": "1.10.3",
+    "eslint-plugin-mocha": "1.1.0",
+    "gulp-zip": "3.1.0",
+    "vinyl-fs": "2.3.1"
+  }
+}
